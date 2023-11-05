@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+html{
+  background-color: black;
 }
 body{
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
@@ -11,6 +15,8 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
   background-size:cover ;
   background-position: bottom;
   transition: 0.4s ease-out;
+  object-fit:cover;
+   object-position:50% 50%;
   
   
 
@@ -24,6 +30,22 @@ main{
   padding: 25px;
   background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(41, 40, 40, 0.7));  
 
+  
+}
+@media  (min-width: 1000px){
+  .App{
+    margin: 0 auto;
+    width: 50%;
+    background-image: repeat;
+  }
+  
+}
+@media  (min-width: 2000px){
+  .App{
+    margin: 0 auto;
+    width: 30%;
+    background-image: repeat;
+  }
   
 }
 .search-box{
@@ -44,6 +66,20 @@ main{
   transition: 0.4s ease-in;
 
 }
+@media  (min-width: 1000px){
+  .search-bar{
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+  @media  (min-width: 1400px){
+    .search-bar{
+      margin: 0 auto;
+      width: 30%;
+    }
+  }
+  
+
 .search-bar:focus{
   background-color: rgba(46,44,44,0.7);
 
@@ -63,4 +99,27 @@ main{
   font-style: italic;
   text-align: center;
   text-shadow: 2px 2px black;
+}
+.weather-box{
+  text-align: center;
+
+}
+.temp{
+  color: white;
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(211, 211, 211, 0.688);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 5rem;
+  font-weight: 900;
+  text-shadow: 2px 6px  rgba(0, 0, 0, 0.822);
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.24);
+}
+.weather{
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.596);
 }
