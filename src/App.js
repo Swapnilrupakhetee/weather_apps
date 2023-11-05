@@ -6,7 +6,15 @@ const api={
 
 function App() {
   const dateBuilder=(d)=>{
-    let months=["Jan", "Feb", "Mar", "Apr", "May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+    let months=["Jan", "Feb", "Mar", "Apr", "May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    let days=["Sun", "Mon", "Tue","Wed", "Thu", "Fri", "Sat"];
+
+    let day=days[d.getDay()];
+    let date=d.getDate();
+    let month=months[d.getMonth()];
+    let year=d.getFullYear();
+
+    return `${day} ${date} ${month} ${year}`;
   }
   return (
     <div className="App">
@@ -21,9 +29,19 @@ function App() {
           <div className='location'>
             Kathmandu,Nepal
             <div className='date'>
-              11/5/2023
+              {dateBuilder(new Date())}
 
             </div>
+          </div>
+          <div className='weather-box'>
+            <div className='temp'>
+              20°
+            </div>
+            <div className='weather'>
+              Sunny
+
+            </div>
+
           </div>
           
         </div>
