@@ -5,6 +5,9 @@ const api={
  }
 
 function App() {
+  const dateBuilder=(d)=>{
+    let months=["Jan", "Feb", "Mar", "Apr", "May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+  }
   return (
     <div className="App">
       <main>
@@ -13,6 +16,16 @@ function App() {
                  className='search-bar'
                  placeholder='Search'
                  />
+        </div>
+        <div className='location-box'>
+          <div className='location'>
+            Kathmandu,Nepal
+            <div className='date'>
+              11/5/2023
+
+            </div>
+          </div>
+          
         </div>
       </main>
     </div>
