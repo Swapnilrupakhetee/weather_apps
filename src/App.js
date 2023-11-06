@@ -16,7 +16,8 @@ function App() {
         .then(res=>res.json())
         .then(result=>{
           setQuery('');
-          setWeather (result)
+          setWeather (result);
+          console.log(weather);
         })
     }
   }
@@ -48,7 +49,7 @@ function App() {
         
         <div className='location-box'>
           <div className='location'>
-            {weather.name},{weather.sys.country}
+            
             <div className='date'>
               {dateBuilder(new Date())}
 
