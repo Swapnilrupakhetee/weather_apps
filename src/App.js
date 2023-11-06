@@ -59,7 +59,7 @@ function App() {
           </div>
           <div className='weather-box'>
             <div className='temp'>
-              {weather.main.temp}°
+              {Math.round(weather.main.temp)}°
             </div>
             <div className='weather'>
               Sunny
