@@ -14,7 +14,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
   
   background-size:cover ;
   background-position: bottom;
-  transition: 0.4s ease-out;
+  transition:0.4s ease-out;
   object-fit:cover;
    object-position:50% 50%;
   
