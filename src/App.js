@@ -46,9 +46,11 @@ function App() {
                  onKeyPress={search}
                  />
         </div>
-        
-        <div className='location-box'>
+        {(typeof weather.main!="undefined")?(
+          <div className='location-box'>
           <div className='location'>
+            {weather.name},{weather.sys.country}
+
             
             <div className='date'>
               {dateBuilder(new Date())}
@@ -57,7 +59,7 @@ function App() {
           </div>
           <div className='weather-box'>
             <div className='temp'>
-              20°
+              {weather.main.temp}°
             </div>
             <div className='weather'>
               Sunny
@@ -67,6 +69,10 @@ function App() {
           </div>
           
         </div>
+        ):('')
+        
+        
+        }
       </main>
     </div>
   );
